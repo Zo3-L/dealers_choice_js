@@ -5,3 +5,14 @@ const data = [
     { id: 4, title: "Let My People Go Surfing", genre: "Biography", name: "Yvon Chouinard", zoeRating: 4 },
     { id: 5, title: "I'm Thinking of Ending Things", genre: "Thriller", name: "Iain Reid", zoeRating: 1 },
   ];
+
+  const list = () => {
+    return [...data]
+  }; 
+  
+  const find = (id) => {
+    const book = data.find(book => book.id === +id);
+    return {...book};
+  }
+  
+  module.exports = { list: list, find: find };

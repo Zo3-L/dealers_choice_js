@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    color: seagreen;
+    font-style: none;
+  }
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
