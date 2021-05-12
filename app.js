@@ -33,6 +33,9 @@ app.get ('/book/:id', (req, res)=>{
   const id = req.params.id;
   const book = bookBank.find(id);
 
+  if (!book.id) {
+    res.send(`The book does not exist in Zoe's Selection`);
+  } else {
   res.send(`<!DOCTYPE html>
   <html>
     <head>
@@ -48,7 +51,10 @@ app.get ('/book/:id', (req, res)=>{
       </body>
 
   </html>`);
+  };
+
 })
+
 
 const PORT = 4556;
 
